@@ -67,7 +67,7 @@ const Story = ({ onBack }: StoryProps) => {
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-6xl md:text-8xl font-black text-white tracking-tighter italic mb-8"
+                            className="text-4xl md:text-8xl font-black text-white tracking-tighter italic mb-8 leading-[1.1]"
                         >
                             Tainara <span className="text-gradient not-italic">Alves.</span>
                         </motion.h1>
@@ -110,7 +110,7 @@ const Story = ({ onBack }: StoryProps) => {
 
                     {/* Timeline */}
                     <div className="relative">
-                        <div className="absolute left-[1.9rem] top-0 bottom-0 w-[1px] bg-gradient-to-b from-violet-500/50 via-fuchsia-500/20 to-transparent" />
+                        <div className="absolute left-[1.4rem] md:left-[1.9rem] top-0 bottom-0 w-[1px] bg-gradient-to-b from-violet-500/50 via-fuchsia-500/20 to-transparent" />
 
                         <div className="space-y-20">
                             {milestones.map((item, index) => (
@@ -122,21 +122,21 @@ const Story = ({ onBack }: StoryProps) => {
                                     className="flex gap-12 group"
                                 >
                                     <div className="relative shrink-0">
-                                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} p-0.5 relative z-10 shadow-2xl transition-transform group-hover:scale-110 duration-500`}>
-                                            <div className="w-full h-full bg-[#020205] rounded-[0.9rem] flex items-center justify-center">
-                                                <item.icon className="text-white" size={24} />
+                                        <div className={`w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-gradient-to-br ${item.color} p-0.5 relative z-10 shadow-2xl transition-transform group-hover:scale-110 duration-500`}>
+                                            <div className="w-full h-full bg-[#020205] rounded-[0.7rem] md:rounded-[0.9rem] flex items-center justify-center">
+                                                <item.icon className="text-white" size={20} />
                                             </div>
                                         </div>
                                         <div className="absolute inset-0 bg-white/20 blur-xl opacity-0 group-hover:opacity-40 transition-opacity" />
                                     </div>
 
-                                    <div className="pt-2">
-                                        <div className="flex items-center gap-4 mb-3">
-                                            <span className="font-mono text-xs font-black text-violet-500 tracking-[0.2em] uppercase">{item.year}</span>
-                                            <div className="h-[1px] w-8 bg-white/10" />
-                                            <h3 className="text-2xl font-black text-white uppercase tracking-tight group-hover:text-gradient transition-all">{item.title}</h3>
+                                    <div className="pt-2 flex-grow">
+                                        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-3">
+                                            <span className="font-mono text-[10px] font-black text-violet-500 tracking-[0.2em] uppercase">{item.year}</span>
+                                            <div className="hidden md:block h-[1px] w-8 bg-white/10" />
+                                            <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-tight group-hover:text-gradient transition-all">{item.title}</h3>
                                         </div>
-                                        <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xl group-hover:text-slate-400 transition-colors">
+                                        <p className="text-slate-500 text-base md:text-lg font-medium leading-relaxed max-w-xl group-hover:text-slate-400 transition-colors">
                                             {item.description}
                                         </p>
                                     </div>
@@ -155,9 +155,9 @@ const Story = ({ onBack }: StoryProps) => {
 
                         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                             <div>
-                                <Code2 className="text-violet-500 mb-6" size={40} />
-                                <h3 className="text-3xl font-black text-white mb-6 uppercase tracking-tighter italic">Filosofia Técnica</h3>
-                                <p className="text-slate-400 leading-relaxed font-medium">
+                                <Code2 className="text-violet-500 mb-6 w-8 h-8 md:w-10 md:h-10" />
+                                <h3 className="text-2xl md:text-3xl font-black text-white mb-6 uppercase tracking-tighter italic">Filosofia Técnica</h3>
+                                <p className="text-slate-400 text-sm md:text-base leading-relaxed font-medium">
                                     Engenharia não é apenas resolver problemas — é criar sistemas elegantes e sustentáveis que resistem ao tempo através de abstração rigorosa, testes automatizados e otimização de performance.
                                 </p>
                             </div>

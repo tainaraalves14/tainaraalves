@@ -28,16 +28,16 @@ const Skills = () => {
                             Engenharia Avançada
                         </span>
                     </motion.div>
-                    <h2 className="text-6xl md:text-9xl font-black text-white tracking-tighter mb-10 italic">
+                    <h2 className="text-5xl md:text-9xl font-black text-white tracking-tighter mb-10 italic">
                         Arsenal <span className="text-gradient not-italic">Técnico</span>
                     </h2>
-                    <p className="text-slate-400 text-xl md:text-2xl font-medium leading-relaxed opacity-70 max-w-3xl mx-auto">
+                    <p className="text-slate-400 text-lg md:text-2xl font-medium leading-relaxed opacity-70 max-w-3xl mx-auto">
                         Arquitetando sistemas com <span className="text-white">precisão</span> e <span className="text-white">rigor matemático.</span>
                     </p>
                 </div>
 
                 {/* Atomic Animation Container */}
-                <div className="relative w-full h-[600px] md:h-[800px] flex items-center justify-center overflow-visible">
+                <div className="relative w-full h-[500px] md:h-[800px] flex items-center justify-center overflow-visible">
 
                     {/* Central Core - Professional Engineering Aesthetic */}
                     <div className="relative z-20 group/core cursor-pointer">
@@ -115,8 +115,10 @@ const Skills = () => {
 
                         {skills.map((skill, index) => {
                             // Define elliptical path parameters matching the SVG
-                            const radiusX = skill.radius * 2.2;
-                            const radiusY = skill.radius * 0.8;
+                            // Scale coefficients for mobile
+                            const mobileScale = typeof window !== 'undefined' && window.innerWidth < 768 ? 0.6 : 1;
+                            const radiusX = skill.radius * 2.2 * mobileScale;
+                            const radiusY = skill.radius * 0.8 * mobileScale;
 
                             return (
                                 <motion.div
@@ -137,7 +139,7 @@ const Skills = () => {
                                             Math.sin(2 * Math.PI) * radiusY
                                         ],
                                         zIndex: [10, 30, 10, 5, 10], // Z-order for depth
-                                        scale: [0.8, 1.1, 0.8, 0.6, 0.8], // Scale for depth effect
+                                        scale: [0.8 * mobileScale, 1.1 * mobileScale, 0.8 * mobileScale, 0.6 * mobileScale, 0.8 * mobileScale], // Scale for depth effect
                                         opacity: [0.6, 1, 0.6, 0.4, 0.6]
                                     }}
                                     transition={{
@@ -156,22 +158,22 @@ const Skills = () => {
                                         />
 
                                         {/* Node Content - Exactly like the reference photo */}
-                                        <div className="relative w-32 h-40 md:w-40 md:h-48 bg-[#080808]/80 border border-white/5 rounded-[2.5rem] flex flex-col items-center justify-center backdrop-blur-xl group-hover:bg-[#0a0a0a] group-hover:border-violet-500/40 group-hover:-translate-y-4 transition-all duration-500 shadow-2xl">
+                                        <div className="relative w-24 h-32 md:w-40 md:h-48 bg-[#080808]/80 border border-white/5 rounded-[1.5rem] md:rounded-[2.5rem] flex flex-col items-center justify-center backdrop-blur-xl group-hover:bg-[#0a0a0a] group-hover:border-violet-500/40 group-hover:-translate-y-4 transition-all duration-500 shadow-2xl p-2">
                                             {/* Icon in Circle Container */}
                                             <div
-                                                className="w-14 h-14 md:w-18 md:h-18 rounded-full mb-4 flex items-center justify-center border border-white/10 relative overflow-hidden"
+                                                className="w-10 h-10 md:w-18 md:h-18 rounded-full mb-3 md:mb-4 flex items-center justify-center border border-white/10 relative overflow-hidden"
                                                 style={{ backgroundColor: `${skill.color}08` }}
                                             >
                                                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
-                                                <skill.icon size={32} className="text-white group-hover:scale-110 transition-transform relative z-10" />
+                                                <skill.icon size={20} className="text-white group-hover:scale-110 transition-transform relative z-10 md:w-8 md:h-8" />
                                             </div>
 
                                             {/* Professional Divider Line */}
-                                            <div className="w-14 h-[1px] bg-gradient-to-r from-transparent via-violet-500/30 to-transparent mb-5" />
+                                            <div className="w-10 md:w-14 h-[1px] bg-gradient-to-r from-transparent via-violet-500/30 to-transparent mb-3 md:mb-5" />
 
                                             {/* Typography - Stacked and Professional */}
-                                            <div className="px-4 text-center">
-                                                <span className="text-[10px] md:text-[12px] font-black text-white/50 group-hover:text-white leading-[1.4] uppercase tracking-[0.2em] block transition-colors whitespace-pre-line">
+                                            <div className="px-2 md:px-4 text-center">
+                                                <span className="text-[8px] md:text-[12px] font-black text-white/50 group-hover:text-white leading-[1.4] uppercase tracking-[0.1em] md:tracking-[0.2em] block transition-colors whitespace-pre-line">
                                                     {skill.name.split(' ').join('\n')}
                                                 </span>
                                             </div>

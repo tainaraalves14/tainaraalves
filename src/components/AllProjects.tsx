@@ -200,7 +200,7 @@ const AllProjects = ({ onBack }: AllProjectsProps) => {
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-6xl md:text-8xl font-black text-white tracking-tighter italic mb-8"
+                        className="text-4xl md:text-8xl font-black text-white tracking-tighter italic mb-8 leading-[1.1]"
                     >
                         Todos os <span className="text-gradient not-italic">Projetos.</span>
                     </motion.h1>
@@ -235,7 +235,7 @@ const AllProjects = ({ onBack }: AllProjectsProps) => {
                         <div className="relative">
                             <button
                                 onClick={() => setIsFilterMenuOpen(!isFilterMenuOpen)}
-                                className={`flex items-center gap-3 bg-white/[0.03] border rounded-2xl px-8 py-5 transition-all font-mono text-xs uppercase tracking-widest font-black ${selectedTag || isFilterMenuOpen ? 'border-violet-500/50 text-white bg-violet-500/10' : 'border-white/10 text-slate-400 hover:text-white hover:bg-white/5'
+                                className={`flex items-center justify-center gap-3 bg-white/[0.03] border rounded-2xl px-8 py-5 transition-all font-mono text-[10px] md:text-xs uppercase tracking-widest font-black w-full md:w-auto ${selectedTag || isFilterMenuOpen ? 'border-violet-500/50 text-white bg-violet-500/10' : 'border-white/10 text-slate-400 hover:text-white hover:bg-white/5'
                                     }`}
                             >
                                 <Filter size={18} />

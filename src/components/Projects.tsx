@@ -53,15 +53,15 @@ const Projects = ({ onSeeMore }: ProjectsProps) => {
                             Ecossistema_de_Projetos
                         </span>
                     </motion.div>
-                    <h2 className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter italic">
+                    <h2 className="text-4xl md:text-8xl font-black text-white mb-8 tracking-tighter italic leading-[1.1]">
                         Projetos em <span className="text-gradient not-italic">Destaque</span>
                     </h2>
-                    <p className="text-slate-400 max-w-3xl mx-auto text-xl font-medium leading-relaxed opacity-70">
+                    <p className="text-slate-400 max-w-3xl mx-auto text-lg md:text-xl font-medium leading-relaxed opacity-70">
                         Soluções tecnicamente complexas projetadas para <span className="text-white">alto desempenho</span> e escalabilidade em infraestruturas modernas.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
                     {projects.map((project, index) => (
                         <ProjectCard key={index} {...project} index={index} />
                     ))}

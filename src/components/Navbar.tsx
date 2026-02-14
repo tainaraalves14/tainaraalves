@@ -91,20 +91,20 @@ const Navbar = ({ onHomeClick }: NavbarProps) => {
                         initial={{ opacity: 0, scale: 0.95, y: -10 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                        className="md:hidden absolute top-24 left-4 right-4 bg-[#0a0a0a]/95 backdrop-blur-3xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl z-50"
+                        className="md:hidden absolute top-[80px] left-4 right-4 bg-[#0a0a0a]/95 backdrop-blur-3xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl z-50"
                     >
-                        <div className="px-4 py-8 space-y-2">
+                        <div className="px-6 py-10 space-y-4">
                             {navigation.map((item) => (
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="block px-6 py-4 rounded-2xl text-[12px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-white hover:bg-white/5 transition-all border border-transparent hover:border-white/5"
+                                    className="block px-6 py-5 rounded-2xl text-[14px] font-black uppercase tracking-[0.3em] text-slate-400 hover:text-white hover:bg-white/5 transition-all border border-transparent hover:border-white/5"
                                     onClick={() => {
                                         setIsOpen(false);
                                         onHomeClick();
                                     }}
                                 >
-                                    <span className="text-violet-500 mr-2 font-mono">{item.id}</span>
+                                    <span className="text-violet-500 mr-3 font-mono">{item.id}</span>
                                     {item.name}
                                 </a>
                             ))}

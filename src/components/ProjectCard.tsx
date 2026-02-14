@@ -56,10 +56,10 @@ const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl, inde
                     />
                 </div>
 
-                <div className="p-8 pt-2 flex flex-col flex-grow">
+                <div className="p-6 md:p-8 pt-2 flex flex-col flex-grow">
                     <div className="mb-4">
-                        <span className="text-[10px] font-mono text-violet-500/60 uppercase tracking-[0.2em] mb-1 block">Implantação_de_Projeto</span>
-                        <h3 className="text-2xl font-black text-white tracking-tighter uppercase group-hover:text-gradient transition-all duration-300">
+                        <span className="text-[9px] md:text-[10px] font-mono text-violet-500/60 uppercase tracking-[0.2em] mb-1 block">Implantação_de_Projeto</span>
+                        <h3 className="text-xl md:text-2xl font-black text-white tracking-tighter uppercase group-hover:text-gradient transition-all duration-300">
                             {title}
                         </h3>
                     </div>

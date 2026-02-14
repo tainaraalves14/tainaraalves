@@ -11,10 +11,10 @@ const Hero = ({ onStoryClick, onProjectsClick }: HeroProps) => {
         <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-                <div className="absolute top-[10%] left-[-5%] w-[600px] h-[600px] bg-violet-600/20 rounded-full blur-[120px] animate-pulse-slow" />
-                <div className="absolute bottom-[10%] right-[-5%] w-[500px] h-[500px] bg-fuchsia-600/10 rounded-full blur-[100px]" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none select-none">
-                    <div className="text-[25vw] font-bold text-white leading-none text-center">
+                <div className="absolute top-[10%] left-[-5%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-violet-600/20 rounded-full blur-[80px] md:blur-[120px] animate-pulse-slow" />
+                <div className="absolute bottom-[10%] right-[-5%] w-[250px] md:w-[500px] h-[250px] md:h-[500px] bg-fuchsia-600/10 rounded-full blur-[60px] md:blur-[100px]" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.02] md:opacity-[0.03] pointer-events-none select-none">
+                    <div className="text-[30vw] md:text-[25vw] font-bold text-white leading-none text-center transform md:rotate-0">
                         Software
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const Hero = ({ onStoryClick, onProjectsClick }: HeroProps) => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-[0.9] tracking-tight mb-8"
+                            className="text-5xl md:text-8xl lg:text-9xl font-bold text-white leading-[1.1] md:leading-[0.9] lg:leading-[1] tracking-tight mb-8"
                         >
                             Desenvolvedor <br />
                             <span className="text-gradient">Full Stack </span>
@@ -87,17 +87,17 @@ const Hero = ({ onStoryClick, onProjectsClick }: HeroProps) => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="mt-12 flex flex-wrap gap-6"
+                            className="mt-12 flex flex-col sm:flex-row gap-6"
                         >
                             <button
                                 onClick={onProjectsClick}
-                                className="px-8 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all flex items-center gap-2 group"
+                                className="px-8 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all flex items-center justify-center gap-2 group w-full sm:w-fit"
                             >
                                 Ver Projetos <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
                             <button
                                 onClick={onStoryClick}
-                                className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all"
+                                className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all w-full sm:w-fit"
                             >
                                 Minha História
                             </button>

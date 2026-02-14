@@ -35,7 +35,7 @@ const About = () => {
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                            className="relative aspect-square max-w-[500px] mx-auto"
+                            className="relative aspect-square w-full max-w-[320px] md:max-w-[500px] mx-auto"
                         >
                             {/* Rotating Engineering Circles */}
                             <motion.div
@@ -50,11 +50,11 @@ const About = () => {
                             />
 
                             {/* The Centerpiece: Glassmorphic CPU/Core */}
-                            <div className="absolute inset-20 bg-[#050505] border border-white/10 rounded-[3rem] backdrop-blur-3xl shadow-2xl flex items-center justify-center p-8 overflow-hidden">
+                            <div className="absolute inset-10 md:inset-20 bg-[#050505] border border-white/10 rounded-[2rem] md:rounded-[3rem] backdrop-blur-3xl shadow-2xl flex items-center justify-center p-4 md:p-8 overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-white/5" />
                                 <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
-                                    <div className="w-20 h-20 rounded-2xl bg-violet-600/10 flex items-center justify-center mb-6 border border-violet-500/20 group-hover:scale-110 group-hover:bg-violet-600/20 transition-all duration-700">
-                                        <Terminal className="text-violet-400" size={32} />
+                                    <div className="w-12 h-12 md:w-20 md:h-20 rounded-xl md:rounded-2xl bg-violet-600/10 flex items-center justify-center mb-4 md:mb-6 border border-violet-500/20 group-hover:scale-110 group-hover:bg-violet-600/20 transition-all duration-700">
+                                        <Terminal className="text-violet-400" size={24} />
                                     </div>
                                     <div className="text-center font-mono">
                                         <p className="text-white font-bold tracking-[0.2em] mb-1">LOGIC_FLOW</p>
@@ -104,7 +104,7 @@ const About = () => {
                                 </span>
                             </div>
 
-                            <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-8 italic">
+                            <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-8 italic leading-[1.1]">
                                 Construindo <span className="text-gradient not-italic">Soluções.</span>
                             </h2>
 
