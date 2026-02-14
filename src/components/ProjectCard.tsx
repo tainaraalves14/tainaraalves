@@ -9,9 +9,11 @@ interface ProjectCardProps {
     githubUrl?: string;
     liveUrl?: string;
     index: number;
+    impact?: string;
+    technicalHighlight?: string;
 }
 
-const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl, index }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl, index, impact, technicalHighlight }: ProjectCardProps) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -33,16 +35,16 @@ const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl, inde
                 <div className="px-8 py-5 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
                     <div className="flex items-center gap-2">
                         <div className="w-1.5 h-1.5 rounded-full bg-violet-500 animate-pulse" />
-                        <span className="text-[9px] font-mono text-slate-500 tracking-[0.2em]">DEP_UID_0{index + 1}</span>
+                        <span className="text-[10px] font-mono text-slate-500 tracking-[0.2em]">DEP_UID_0{index + 1}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <span className="text-[9px] font-mono text-slate-600 uppercase tracking-widest">Status:</span>
-                        <span className="text-[9px] font-mono text-violet-400 font-bold uppercase tracking-widest">Estável</span>
+                        <span className="text-[10px] font-mono text-slate-600 uppercase tracking-widest">Status:</span>
+                        <span className="text-[10px] font-mono text-violet-400 font-bold uppercase tracking-widest">Estável</span>
                     </div>
                 </div>
 
                 {/* Image Container with Blueprint Accents */}
-                <div className="relative h-64 overflow-hidden m-4 rounded-[2rem]">
+                <div className="relative h-48 overflow-hidden m-4 rounded-[2rem]">
                     <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/10 transition-colors duration-500 z-10" />
 
                     {/* Corner Blueprint Elements */}
@@ -58,15 +60,32 @@ const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl, inde
 
                 <div className="p-6 md:p-8 pt-2 flex flex-col flex-grow">
                     <div className="mb-4">
-                        <span className="text-[9px] md:text-[10px] font-mono text-violet-500/60 uppercase tracking-[0.2em] mb-1 block">Implantação_de_Projeto</span>
+                        <span className="text-[10px] font-mono text-violet-500/60 uppercase tracking-[0.2em] mb-1 block">Implantação_de_Projeto</span>
                         <h3 className="text-xl md:text-2xl font-black text-white tracking-tighter uppercase group-hover:text-gradient transition-all duration-300">
                             {title}
                         </h3>
                     </div>
 
-                    <p className="text-slate-400 mb-8 line-clamp-2 text-sm font-medium leading-relaxed opacity-80">
+                    <p className="text-slate-400 mb-6 text-sm font-medium leading-relaxed opacity-80">
                         {description}
                     </p>
+
+                    {impact && (
+                        <div className="mb-4 p-4 rounded-2xl bg-violet-600/5 border border-violet-500/10">
+                            <span className="text-[9px] font-mono text-violet-400 font-bold uppercase tracking-widest block mb-2">Impacto_do_Negócio</span>
+                            <p className="text-slate-400 text-xs leading-relaxed">{impact}</p>
+                        </div>
+                    )}
+
+                    {technicalHighlight && (
+                        <div className="mb-6">
+                            <span className="text-[9px] font-mono text-fuchsia-400/60 uppercase tracking-widest block mb-2">Destaque_Técnico</span>
+                            <div className="flex items-start gap-2">
+                                <div className="w-1 h-3 bg-fuchsia-500/40 rounded-full mt-1" />
+                                <p className="text-slate-500 text-xs leading-relaxed italic">{technicalHighlight}</p>
+                            </div>
+                        </div>
+                    )}
 
                     <div className="flex flex-wrap gap-2 mb-10">
                         {tags.map((tag) => (
@@ -80,7 +99,7 @@ const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl, inde
                     </div>
 
                     <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
-                        {liveUrl && (
+                        {liveUrl && liveUrl !== '#' && (
                             <motion.a
                                 whileHover={{ scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
@@ -100,7 +119,7 @@ const ProjectCard = ({ title, description, tags, image, githubUrl, liveUrl, inde
                                 href={githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center justify-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-white border border-white/5 px-6 py-4 rounded-2xl transition-all duration-300"
+                                className={`flex items-center justify-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 hover:text-white border border-white/5 px-6 py-4 rounded-2xl transition-all duration-300 ${(!liveUrl || liveUrl === '#') ? 'w-full' : ''}`}
                             >
                                 <Github size={16} />
                                 Código

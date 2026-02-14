@@ -135,6 +135,66 @@ const projects = [
         image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/dora_metrics_dashboard_1771095373620.png',
         liveUrl: '#',
         githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Data Lakehouse Minimalista (Concept)',
+        description: 'Arquitetura moderna de dados focada em versionamento e performance em larga escala.',
+        tags: ['DuckDB', 'Iceberg', 'Python', 'Data Engineering', 'ETL'],
+        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/aion_platform_1771095131101.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+        impact: 'Mostra domínio da "Modern Data Stack" e capacidade de garantir consistência em ambientes de dados não estruturados.',
+        technicalHighlight: 'Implementação de "Schema Enforcement" para validação rigorosa antes da persistência.'
+    },
+    {
+        title: 'Sistema RAG Agêntico (Concept)',
+        description: 'Orquestração de agentes inteligentes para sistemas de resposta com memória e ferramentas externas.',
+        tags: ['LangGraph', 'LLMs', 'Python', 'RAG', 'AI'],
+        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/llm_evaluation_1771095179515.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+        impact: 'Supera o RAG básico com agentes autônomos que corrigem a própria busca através de técnicas avançadas de recuperação.',
+        technicalHighlight: 'Implementação de "Self-RAG" onde o agente avalia criticamente a utilidade do contexto retornado.'
+    },
+    {
+        title: 'Database Security Proxy (Concept)',
+        description: 'Middleware de alta performance para proteção de dados e conformidade em tempo real.',
+        tags: ['Go', 'Python', 'Security', 'SQL', 'AST'],
+        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/api_governance_1771095240394.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+        impact: 'Demonstra conhecimento profundo de protocolos de rede e segurança, essencial para empresas sob regulação LGPD.',
+        technicalHighlight: 'Uso de AST (Abstract Syntax Tree) para análise e modificação sintática de queries SQL em tempo real.'
+    },
+    {
+        title: 'Auto-Remediação via Observabilidade (Concept)',
+        description: 'Automação inteligente de SRE para reduzir o tempo de recuperação (MTTR) de serviços críticos.',
+        tags: ['Kubernetes', 'Prometheus', 'SRE', 'DevOps', 'Go'],
+        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/auto_scaling_cloud_1771095212137.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+        impact: 'Reflete uma mentalidade focada na disponibilidade do negócio e resiliência de infraestruturas distribuídas.',
+        technicalHighlight: 'Execução de playbooks automáticos (ex: Rollback) baseada em detecção analítica de anomalias.'
+    },
+    {
+        title: 'Auditor de Privacidade via LLM (Concept)',
+        description: 'Integração de IA no ciclo de vida de desenvolvimento para auditoria proativa de segurança.',
+        tags: ['LLMs', 'Compliance', 'LGPD', 'CI/CD', 'Security'],
+        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/llm_code_auditor_1771095261322.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+        impact: 'Resolve a dor latente de revisão manual de conformidade, unindo Auditoria, IA e Engenharia no CI/CD.',
+        technicalHighlight: 'Análise semântica de "diffs" e políticas documentadas para detecção automática de vazamento de PII.'
+    },
+    {
+        title: 'Graph Fraud Detector (Concept)',
+        description: 'Detecção de padrões complexos de fraude em redes sociais e financeiras através de grafos.',
+        tags: ['Neo4j', 'Python', 'Graph Theory', 'Fraud Detection', 'Data Science'],
+        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/fake_news_detection_graph_2_1771095311709.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+        impact: 'Domina estruturas de dados complexas para resolver problemas que o ML tradicional (tabular) não consegue capturar.',
+        technicalHighlight: 'Uso de algoritmos de detecção de comunidades no Neo4j para encontrar grupos de "contas laranja" síncronas.'
     }
 ];
 
