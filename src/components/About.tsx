@@ -104,11 +104,11 @@ const About = () => {
                                 </span>
                             </div>
 
-                            <h2 className="text-4xl md:text-7xl font-black text-white tracking-tighter mb-8 italic leading-[1.1]">
+                            <h2 className="text-3xl md:text-7xl font-black text-white tracking-tighter mb-6 md:mb-8 italic leading-[1.1]">
                                 Construindo <span className="text-gradient not-italic">Soluções.</span>
                             </h2>
 
-                            <p className="text-slate-400 text-lg md:text-xl font-medium leading-relaxed mb-12 opacity-80">
+                            <p className="text-slate-400 text-base md:text-xl font-medium leading-relaxed mb-10 md:mb-12 opacity-80">
                                 Mais do que simplesmente "escrever código", eu projeto fundamentos digitais. Minha filosofia está enraizada em <span className="text-white">abstração limpa</span> e <span className="text-white">engenharia de alto desempenho.</span>
                             </p>
 

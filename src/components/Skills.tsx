@@ -28,19 +28,19 @@ const Skills = () => {
                             Engenharia Avançada
                         </span>
                     </motion.div>
-                    <h2 className="text-5xl md:text-9xl font-black text-white tracking-tighter mb-10 italic">
+                    <h2 className="text-4xl md:text-9xl font-black text-white tracking-tighter mb-8 md:mb-10 italic">
                         Arsenal <span className="text-gradient not-italic">Técnico</span>
                     </h2>
-                    <p className="text-slate-400 text-lg md:text-2xl font-medium leading-relaxed opacity-70 max-w-3xl mx-auto">
+                    <p className="text-slate-400 text-base md:text-2xl font-medium leading-relaxed opacity-70 max-w-3xl mx-auto">
                         Arquitetando sistemas com <span className="text-white">precisão</span> e <span className="text-white">rigor matemático.</span>
                     </p>
                 </div>
 
                 {/* Atomic Animation Container */}
-                <div className="relative w-full h-[500px] md:h-[800px] flex items-center justify-center overflow-visible">
+                <div className="relative w-full h-[600px] md:h-[800px] flex items-center justify-center overflow-visible">
 
                     {/* Central Core - Professional Engineering Aesthetic */}
-                    <div className="relative z-20 group/core cursor-pointer">
+                    <div className="relative z-20 group/core cursor-pointer scale-75 md:scale-100">
                         <motion.div
                             animate={{
                                 scale: [1, 1.15, 1],

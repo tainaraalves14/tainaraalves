@@ -1,0 +1,141 @@
+export interface Project {
+    title: string;
+    description: string;
+    tags: string[];
+    image: string;
+    liveUrl: string;
+    githubUrl: string;
+    impact?: string;
+    technicalHighlight?: string;
+}
+
+export const projects: Project[] = [
+    {
+        title: 'Aion — Plataforma Inteligente de Gestão Escolar',
+        description: 'Plataforma completa para gestão educacional, projetada para resolver problemas como geração automática de horários e acompanhamento analítico.',
+        tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'DDD'],
+        image: '/projects/aion.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Aurora Risk Engine — Motor de Fraudes',
+        description: 'Plataforma orientada a eventos para detecção de fraudes financeiras em tempo real, com decisões em milissegundos e alta confiabilidade.',
+        tags: ['Python', 'Kafka', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'ML'],
+        image: '/projects/aurora.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'SagradoVoz — Plataforma Musical',
+        description: 'Plataforma musical baseada em microserviços escaláveis, preparada para alto volume de usuários e comunicação assíncrona.',
+        tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'Kafka', 'Microservices'],
+        image: '/projects/sagradovoz.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'LLM de Avaliação Comparativa — IC',
+        description: 'Sistema baseado em Large Language Models para avaliação comparativa automatizada de textos e conteúdos técnicos.',
+        tags: ['Python', 'AI', 'OpenAI', 'FastAPI', 'PostgreSQL', 'NLP', 'Embeddings'],
+        image: '/projects/llm_evaluation.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Plataforma de Observabilidade Inteligente',
+        description: 'Sistema que correlaciona logs, métricas e traces para identificar anomalias automaticamente em infraestruturas distribuídas.',
+        tags: ['Python', 'OpenTelemetry', 'Prometheus', 'Grafana', 'Kafka', 'Elasticsearch'],
+        image: '/projects/observability.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Motor Preditivo de Auto-Scaling',
+        description: 'Algoritmo que ajusta recursos dinamicamente baseado em comportamento histórico e métricas de performance.',
+        tags: ['Python', 'Kubernetes', 'Metrics API', 'Prometheus', 'ML'],
+        image: '/projects/auto_scaling.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Sistema Preditivo de Incidentes',
+        description: 'Previsão de falhas antes que impactem usuários, utilizando processamento de eventos em tempo real e ML.',
+        tags: ['Python', 'Kafka', 'ML', 'FastAPI', 'PostgreSQL'],
+        image: '/projects/incident_prediction.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Plataforma de Governança de APIs',
+        description: 'Validação automática de contratos, versionamento e monitoramento de conformidade para ecossistemas de APIs.',
+        tags: ['Python', 'OpenAPI', 'CI/CD', 'Actions', 'Docker'],
+        image: '/projects/api_governance.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Auditor Inteligente de Código com LLM',
+        description: 'Análise semântica avançada para detectar vulnerabilidades lógicas e falhas de segurança no código-fonte.',
+        tags: ['Python', 'LLMs', 'AST', 'FastAPI', 'PostgreSQL'],
+        image: '/projects/code_auditor.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Detecção Distribuída de Fake News',
+        description: 'Análise de propagação de desinformação usando grafos e processamento de linguagem natural.',
+        tags: ['Python', 'Neo4j', 'NLP', 'Kafka', 'FastAPI'],
+        image: '/projects/fake_news.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Plataforma de Gestão de Risco para PMEs',
+        description: 'Solução inteligente de análise de risco e saúde financeira projetada especificamente para pequenas empresas.',
+        tags: ['Python', 'FastAPI', 'PostgreSQL', 'ML', 'Docker'],
+        image: '/projects/pme_risk.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Orquestrador Inteligente de Eventos Kafka',
+        description: 'Balanceamento dinâmico e inteligente de consumidores para clusters Kafka de alto volume.',
+        tags: ['Python', 'Kafka', 'Redis', 'Kubernetes'],
+        image: '/projects/kafka_orchestrator.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Motor de Matching com Embeddings',
+        description: 'Matching semântico de alta precisão entre candidatos e vagas utilizando representações vetoriais.',
+        tags: ['Python', 'Embeddings', 'PostgreSQL', 'FastAPI'],
+        image: '/projects/matching.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Sistema Automatizado LGPD',
+        description: 'Monitoramento contínuo e automação de compliance para proteção de dados sensíveis e privacidade.',
+        tags: ['Python', 'Data Scanner', 'PostgreSQL', 'FastAPI'],
+        image: '/projects/lgpd.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Chaos Engineering Automatizado',
+        description: 'Simulação controlada de falhas em ambientes Kubernetes para validar a resiliência do sistema.',
+        tags: ['Python', 'Kubernetes', 'Docker', 'Observability'],
+        image: '/projects/chaos.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    },
+    {
+        title: 'Plataforma de Métricas DORA',
+        description: 'Análise automatizada de performance de times técnicos baseada nos pilares de DevOps.',
+        tags: ['Python', 'GitHub API', 'PostgreSQL', 'Dashboards'],
+        image: '/projects/dora.png',
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tainaraalves14',
+    }
+];

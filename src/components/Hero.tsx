@@ -43,18 +43,18 @@ const Hero = ({ onStoryClick, onProjectsClick }: HeroProps) => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-5xl md:text-8xl lg:text-9xl font-bold text-white leading-[1.1] md:leading-[0.9] lg:leading-[1] tracking-tight mb-8"
+                            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-[1.1] md:leading-[0.9] lg:leading-[1] tracking-tight mb-8"
                         >
-                            Desenvolvedor <br />
+                            Desenvolvedor <br className="hidden sm:block" />
                             <span className="text-gradient">Full Stack </span>
                         </motion.h1>
 
-                        <div className="flex flex-col md:flex-row md:items-end gap-8">
+                        <div className="flex flex-col md:flex-row md:items-end gap-6 md:gap-8">
                             <motion.p
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.3 }}
-                                className="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed"
+                                className="text-slate-400 text-base md:text-xl max-w-xl leading-relaxed"
                             >
                                 Com foco em sistemas inteligentes, arquitetura limpa e integração entre camadas.
                             </motion.p>
@@ -75,9 +75,10 @@ const Hero = ({ onStoryClick, onProjectsClick }: HeroProps) => {
                                         href={social.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-violet-600 transition-all duration-300 group"
+                                        aria-label={`Visitar meu perfil no ${social.Icon.name || (social.url.includes('github') ? 'Github' : social.url.includes('linkedin') ? 'Linkedin' : 'Email')}`}
+                                        className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-violet-600 transition-all duration-300 group"
                                     >
-                                        <social.Icon size={20} className="group-hover:scale-110 transition-transform" />
+                                        <social.Icon size={18} className="group-hover:scale-110 transition-transform md:w-5 md:h-5" />
                                     </a>
                                 ))}
                             </motion.div>
@@ -87,17 +88,17 @@ const Hero = ({ onStoryClick, onProjectsClick }: HeroProps) => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="mt-12 flex flex-col sm:flex-row gap-6"
+                            className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6"
                         >
                             <button
                                 onClick={onProjectsClick}
-                                className="px-8 py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all flex items-center justify-center gap-2 group w-full sm:w-fit"
+                                className="px-6 py-3.5 md:px-8 md:py-4 rounded-full bg-white text-slate-900 font-bold hover:bg-slate-200 transition-all flex items-center justify-center gap-2 group w-full sm:w-fit"
                             >
                                 Ver Projetos <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                             </button>
                             <button
                                 onClick={onStoryClick}
-                                className="px-8 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all w-full sm:w-fit"
+                                className="px-6 py-3.5 md:px-8 md:py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold hover:bg-white/10 transition-all w-full sm:w-fit"
                             >
                                 Minha História
                             </button>

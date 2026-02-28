@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Story from './components/Story';
 import AllProjects from './components/AllProjects';
 import CustomCursor from './components/CustomCursor';
+import ContactForm from './components/ContactForm';
 import { Palette, Terminal, Zap, Shield } from 'lucide-react';
 
 function App() {
@@ -101,6 +102,7 @@ function App() {
             </section>
 
             <Projects onSeeMore={() => setView('projects')} />
+            <ContactForm />
           </motion.div>
         ) : view === 'story' ? (
           <Story key="story" onBack={() => setView('home')} />

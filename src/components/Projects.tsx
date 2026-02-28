@@ -1,32 +1,8 @@
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import { projects } from '../data/projects';
 
-const projects = [
-    {
-        title: 'Aion — Plataforma Inteligente de Gestão Escolar',
-        description: 'Plataforma completa para gestão educacional, com geração automática de horários e acompanhamento analítico de desempenho acadêmico.',
-        tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker', 'DDD'],
-        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/aion_platform_1771095131101.png',
-        liveUrl: '#',
-        githubUrl: 'https://github.com/tainaraalves14',
-    },
-    {
-        title: 'Aurora Risk Engine — Motor de Fraudes',
-        description: 'Plataforma orientada a eventos para detecção de fraudes financeiras em tempo real, com decisões em milissegundos.',
-        tags: ['Python', 'Kafka', 'FastAPI', 'PostgreSQL', 'Redis', 'ML'],
-        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/aurora_risk_engine_1771095151011.png',
-        liveUrl: '#',
-        githubUrl: 'https://github.com/tainaraalves14',
-    },
-    {
-        title: 'SagradoVoz — Plataforma Musical Microserviços',
-        description: 'Plataforma musical baseada em microserviços escaláveis, com comunicação assíncrona e alta performance.',
-        tags: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Kafka', 'Microservices'],
-        image: 'file:///home/tainara/.gemini/antigravity/brain/97583325-350a-4ea3-b312-eb841a07ceda/sagradovoz_music_1771095164378.png',
-        liveUrl: '#',
-        githubUrl: 'https://github.com/tainaraalves14',
-    }
-];
+const featuredProjects = projects.slice(0, 3);
 
 
 interface ProjectsProps {
@@ -62,7 +38,7 @@ const Projects = ({ onSeeMore }: ProjectsProps) => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
-                    {projects.map((project, index) => (
+                    {featuredProjects.map((project, index) => (
                         <ProjectCard key={index} {...project} index={index} />
                     ))}
                 </div>

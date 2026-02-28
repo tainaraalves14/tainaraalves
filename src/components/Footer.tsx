@@ -61,6 +61,7 @@ const Footer = () => {
                                     href={social.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    aria-label={`Visitar meu perfil no ${social.Icon.name || (social.url.includes('github') ? 'Github' : social.url.includes('linkedin') ? 'Linkedin' : 'Email')}`}
                                     className="w-14 h-14 rounded-2xl bg-[#0a0a0a] border border-white/5 flex items-center justify-center text-slate-400 hover:text-white hover:border-violet-500/50 hover:bg-violet-500/5 transition-all duration-500 group relative overflow-hidden shadow-2xl"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
